@@ -8,6 +8,7 @@ class AppButton extends StatelessWidget {
   final Color? color;
   final Color? textColor;
   final Color? borderColor;
+  final bool isLoading;
   const AppButton(
       {super.key,
       this.onTap,
@@ -15,7 +16,8 @@ class AppButton extends StatelessWidget {
       this.width,
       this.color,
       this.textColor,
-      this.borderColor});
+      this.borderColor,
+      this.isLoading = false});
 
   @override
   Widget build(BuildContext context) {
@@ -34,10 +36,12 @@ class AppButton extends StatelessWidget {
           color: color ?? const Color(0xff34A853),
         ),
         child: Center(
-          child: Text(
-            text ?? "Compelete Payment",
-            style: AppStyles.style22.copyWith(color: textColor),
-          ),
+          child: isLoading
+              ? const CircularProgressIndicator()
+              : Text(
+                  text ?? "Compelete Payment",
+                  style: AppStyles.style22.copyWith(color: textColor),
+                ),
         ),
       ),
     );

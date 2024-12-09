@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_payment_application/features/checkout/data/repo/checkout_repo_impl.dart';
 import '../../../../core/widget/app_bar.dart';
 import '../../../../core/widget/app_button.dart';
 import '../cubit/checkout_cubit.dart';
@@ -22,7 +23,7 @@ class _PaymentDetailsScreenState extends State<PaymentDetailsScreen> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => CheckoutCubit(),
+      create: (context) => CheckoutCubit(CheckoutRepoImpl()),
       child: BlocBuilder<CheckoutCubit, CheckoutState>(
         builder: (context, state) {
           final cubit = context.read<CheckoutCubit>();
