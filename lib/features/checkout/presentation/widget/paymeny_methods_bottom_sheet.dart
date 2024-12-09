@@ -65,7 +65,11 @@ class PaymentMethodsButtomSheet extends StatelessWidget {
                   text: "Continue",
                   onTap: () {
                     PaymentIntentInputModel inputModel =
-                        PaymentIntentInputModel(amount: "100", currency: "USD");
+                        PaymentIntentInputModel(
+                      amount: "100",
+                      currency: "USD",
+                      customerId: "cus_RMw6z3rS42Hh4l",
+                    );
                     cubit.makePayment(input: inputModel);
                   },
                 )

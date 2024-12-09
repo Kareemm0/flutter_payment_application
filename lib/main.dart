@@ -20,10 +20,8 @@ class FlutterPaymentGetway extends StatelessWidget {
   }
 }
 
-
-//! Payment Steps 
-// 1- Payment intent Object Create Payment intent(amount  , currency)
-// 2- init payment sheet(paymentIntentClientSecret)
-// 3- Present Payment Sheet ()
-
-
+//! Payment Steps
+// 1- Payment intent Object Create Payment intent(amount,currency , CustomerId --> it's Optional )
+// -  Create Ephemeral Key(customer id)
+// 2- init payment sheet(paymentIntentClientSecret -> (merchantDisplayName , inentClientSecret , ephmeralKeySecret))
+// 3- Present Payment  Sheet ()
