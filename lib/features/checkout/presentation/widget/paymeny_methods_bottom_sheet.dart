@@ -23,6 +23,7 @@ class PaymentMethodsButtomSheet extends StatelessWidget {
                 MaterialPageRoute(
                     builder: (context) => const ThankYouScreen()));
           } else if (state is CheckoutFailureState) {
+            Navigator.pop(context);
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(
                 content: Text(state.error),
