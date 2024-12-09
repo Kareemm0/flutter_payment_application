@@ -1,14 +1,15 @@
 allprojects {
+    
     repositories {
         google()
         mavenCentral()
     }
 }
 
-android {
-    namespace 'com.example.flutter_payment_application'
+// android {
+//     namespace 'com.example.flutter_payment_application'
    
-}
+// }
 
 rootProject.buildDir = "../build"
 subprojects {
